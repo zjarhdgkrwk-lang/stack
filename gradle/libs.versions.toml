@@ -2,6 +2,12 @@
 agp = "8.7.2"
 kotlin = "2.0.21"
 ksp = "2.0.21-1.0.28"
+minSdk = "26"
+targetSdk = "35"
+compileSdk = "35"
+androidx-core = "1.13.1"
+androidx-appcompat = "1.7.0"
+androidx-activity = "1.9.3"
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
@@ -12,6 +18,12 @@ kotlin-compose = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "ko
 ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
 
 [libraries]
+# build-logic 전용
 android-gradle-plugin = { group = "com.android.tools.build", name = "gradle", version.ref = "agp" }
 kotlin-gradle-plugin = { group = "org.jetbrains.kotlin", name = "kotlin-gradle-plugin", version.ref = "kotlin" }
 ksp-gradle-plugin = { group = "com.google.devtools.ksp", name = "com.google.devtools.ksp.gradle.plugin", version.ref = "ksp" }
+
+# 최소 AndroidX
+androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "androidx-core" }
+androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "androidx-appcompat" }
+androidx-activity = { group = "androidx.activity", name = "activity", version.ref = "androidx-activity" }

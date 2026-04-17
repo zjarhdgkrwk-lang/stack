@@ -25,4 +25,18 @@ enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
 
 rootProject.name = "stack"
 
-// 모듈은 Phase 1에서 추가
+include(
+    ":app",
+    ":core:common",
+    ":core:design",
+    ":core:ui",
+    ":core:database",
+    ":core:datastore",
+    ":core:domain",
+    ":core:audio",
+    ":feature:library",
+    ":feature:player",
+    ":feature:playlist",
+    ":feature:search",
+    ":feature:settings",
+)
