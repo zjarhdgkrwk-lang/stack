@@ -515,7 +515,7 @@ $ANDROID_HOME/build-tools/35.0.0/aapt dump permissions \
 
 | # | Phase | 상태 |
 |---|---|---|
-| 0 | 저장소 스켈레톤 | ☐ |
+| 0 | 저장소 스켈레톤 | ☑ |
 | 1 | 13개 모듈 셸 | ☐ |
 | 2 | 의존성 enforcement | ☐ |
 | 3 | core:design + core:common | ☐ |
