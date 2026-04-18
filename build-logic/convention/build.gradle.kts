@@ -19,6 +19,8 @@ dependencies {
     compileOnly(libs.android.gradle.plugin)
     compileOnly(libs.kotlin.gradle.plugin)
     compileOnly(libs.ksp.gradle.plugin)
+    compileOnly(libs.ktlint.gradle.plugin)
+    compileOnly(libs.detekt.gradle.plugin)
     // version catalog accessor를 convention plugin 클래스에서 사용하기 위한 workaround
     compileOnly(files(libs.javaClass.superclass.protectionDomain.codeSource.location))
 }
@@ -36,6 +38,10 @@ gradlePlugin {
         register("kotlinLibrary") {
             id = "stack.kotlin.library"
             implementationClass = "KotlinLibraryConventionPlugin"
+        }
+        register("verification") {
+            id = "stack.verification"
+            implementationClass = "VerificationConventionPlugin"
         }
     }
 }

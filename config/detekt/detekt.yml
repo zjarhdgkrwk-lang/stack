@@ -1,0 +1,73 @@
+build:
+  maxIssues: 0
+  excludeCorrectable: false
+
+comments:
+  CommentOverPrivateFunction:
+    active: false
+  EndOfSentenceFormat:
+    active: false
+  UndocumentedPublicClass:
+    active: false
+  UndocumentedPublicFunction:
+    active: false
+  UndocumentedPublicProperty:
+    active: false
+
+complexity:
+  LongMethod:
+    active: true
+    threshold: 60
+  LongParameterList:
+    active: true
+    functionThreshold: 6
+    constructorThreshold: 7
+    ignoreDefaultParameters: true
+    ignoreAnnotated: ['Composable']
+  ComplexCondition:
+    active: true
+    threshold: 4
+  CyclomaticComplexMethod:
+    active: true
+    threshold: 15
+
+naming:
+  FunctionNaming:
+    active: true
+    ignoreAnnotated: ['Composable', 'Test']
+  TopLevelPropertyNaming:
+    active: true
+
+style:
+  MagicNumber:
+    active: true
+    ignoreNumbers: ['-1', '0', '1', '2']
+    ignoreHashCodeFunction: true
+    ignoreEnums: true
+    ignoreAnnotation: true
+  MaxLineLength:
+    active: true
+    maxLineLength: 120
+  WildcardImport:
+    active: true
+    excludeImports:
+      - 'kotlinx.coroutines.*'
+      - 'androidx.compose.runtime.*'
+      - 'androidx.compose.foundation.layout.*'
+      - 'androidx.compose.material3.*'
+  ForbiddenComment:
+    active: true
+    comments:
+      - reason: 'TODO는 phases/*-OPEN.md 또는 GitHub Issue로 관리'
+        value: 'TODO:'
+      - reason: 'FIXME는 GitHub Issue로 관리'
+        value: 'FIXME:'
+      - reason: 'XXX는 명확한 이슈로 관리'
+        value: 'XXX:'
+  ReturnCount:
+    active: true
+    max: 4
+  UnusedImports:
+    active: true
+  UnusedPrivateMember:
+    active: true
